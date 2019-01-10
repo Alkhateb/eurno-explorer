@@ -37,11 +37,11 @@ As with many Wordpress plugins which use shortcodes the Gutenberg editor has pro
 **Solution**
 As a workaround in order to prevent this error message from being displayed you can use the classic Wordpress editor (as is recommended by other plugin developers), you can download it here: [https://en-gb.wordpress.org/plugins/classic-editor/](https://en-gb.wordpress.org/plugins/classic-editor/)
 
-~~#### Not displaying on preview page
-This is due to a line of code I have put on the include file which prevents the rendered html/js from displaying on the editor. Will fix today~~
+#### ~~Not displaying on preview page~~
+~~This is due to a line of code I have put on the include file which prevents the rendered html/js from displaying on the editor. Will fix today~~
 
-~~#### Votes incorrectly formatted
-It was pointed out I need to divide the value returned for votes by 10,000 as they are showing billions and not millions (as per the api call). This will be rectified tonight (10/1/2019).~~
+#### ~~Votes incorrectly formatted~~
+~~It was pointed out I need to divide the value returned for votes by 10,000 as they are showing billions and not millions (as per the api call). This will be rectified tonight (10/1/2019).~~
 
 ## Thanks
 We would like to thank everyone who has supported the Eurno project and assisted with trouble shooting this plugin. The people over at [Stack Overflow](https://stackoverflow.com) have been a huge help, thank you.
