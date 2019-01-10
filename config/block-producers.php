@@ -49,6 +49,7 @@
           $time = $bp['last_claim_time'] /1000000;
           $time = date('Y-m-d', $time);
         }
+        $votes = number_format((float)$bp['total_votes'], 0, '.', '');
         echo '<tr>';
           echo '<td>';
             echo $i;
@@ -60,7 +61,7 @@
             echo '<span  id="status-' . $i . '" class="badge badge-warning mx-auto">Inactive';
           echo '</td>';
           echo '<td>';
-            echo number_format($bp['total_votes']);
+            echo number_format($votes / 10000);
           echo '</td>';
           echo '<td>';
             echo number_format($bp['unpaid_blocks']);
