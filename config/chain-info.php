@@ -4,7 +4,7 @@
     $arr = myScript.eurnoExplorer['eurno_data'];
     $chain = $s.split('=')[0];
     $chain = $chain.split('?')[1];
-    if(!$chain){
+    if(!$chain || $chain === "preview"){
       $chain = "enu";
     }
     url = $arr['api'][$chain][0] + '/v1/chain/get_info';
