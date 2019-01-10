@@ -40,4 +40,6 @@ As a workaround in order to prevent this error message from being displayed you 
 ## Thanks
 We would like to thank everyone who has supported the Eurno project and assisted with trouble shooting this plugin. The people over at [Stack Overflow](https://stackoverflow.com) have been a huge help, thank you.
 
+We would also like to thank @nayuki for their QRcode generator plugin, and @caldwell for their RenderJSON plugin.
+
 # Happiness. 
