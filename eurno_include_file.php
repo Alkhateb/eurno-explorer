@@ -1,7 +1,7 @@
 <?php
 function begin_eurno_explorer() {
 if (!isset($_GET['action'])) {
-if((!empty(key($_GET))) ){
+if(((!empty(key($_GET))) && (!isset($_GET['preview']))) ){
 $chainName = key($_GET);
 if(isset($_GET[$chainName])){
   $name = $_GET[$chainName];
