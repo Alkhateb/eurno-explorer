@@ -5,7 +5,7 @@
  * A plugin to allow web owners  to easily display information regarding EOS based blockchains. Create's a shortcode which can be used to display the contents of 'include-me.php'.
  *
  * @link              https://github.com/Eurno/eurno-explorer
- * @since             1.0.0
+ * @since             v1.0.0-beta1.0.1
  * @package           eurno_explorer
  *
  * @wordpress-plugin
@@ -19,7 +19,6 @@
  * License URI:       https://github.com/Eurno/eurno-explorer/blob/master/LICENSE
  */
 include_once "admin-settings.php";
-include_once "eurno_include_file.php";
 function check_bootstrap() {
   global $wp_styles;
   $srcs = array_map('basename', (array) wp_list_pluck($wp_styles->registered, 'src') );
@@ -43,7 +42,11 @@ function explorer_script(){
 }
 add_action('wp_enqueue_scripts', 'explorer_script');
 function enu_explorer_shortcode() {
-  return begin_eurno_explorer();
+  ob_start();
+  include_once "eurno_include_file.php";
+  begin_eurno_explorer();
+  $eurno_explorer_output = ob_get_clean();
+  return $eurno_explorer_output;
 }
 add_shortcode( 'eurno_explorer', 'enu_explorer_shortcode' );
 ?>
