@@ -33,7 +33,7 @@ This plugin has been developed entirely from scratch on a voluntary basis so you
 The following issues are already noted by the Eurno team and are being actively worked on, if you notice an issue which needs attention and is not listed below please create a pull request. Alternatively, if you think you can solve an issue listed below please do the same. 
 
 #### ~~Wordpress Gutenberg editor compatibility.~~
-~~As with many Wordpress plugins which use shortcodes the Gutenberg editor has provided some errors. With our Eurno Explorer the error is no different: Wordpress displays "update failed." or "publishing failed." when you save a page with the [eurno_explorer] shortcode. From what we can see the page does in fact update and the plugin is then visible on the page you create. ~~
+~~As with many Wordpress plugins which use shortcodes the Gutenberg editor has provided some errors. With our Eurno Explorer the error is no different: Wordpress displays "update failed." or "publishing failed." when you save a page with the [eurno_explorer] shortcode. From what we can see the page does in fact update and the plugin is then visible on the page you create.~~
 
 #### ~~Not displaying on preview page~~
 ~~This is due to a line of code I have put on the include file which prevents the rendered html/js from displaying on the editor. Will fix today~~
