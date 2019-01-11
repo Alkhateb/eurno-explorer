@@ -5,14 +5,14 @@
  * A plugin to allow web owners  to easily display information regarding EOS based blockchains. Create's a shortcode which can be used to display the contents of 'include-me.php'.
  *
  * @link              https://github.com/Eurno/eurno-explorer
- * @since             v1.0.0-beta1.0.1
+ * @since             v1.0.0-beta1.0.0
  * @package           eurno_explorer
  *
  * @wordpress-plugin
  * Plugin Name:       Eurno Explorer
  * Plugin URI:        https://github.com/eurno/eurno-explorer
  * Description:       A plugin which allows users to explore their accounts on the EOS blockchain and some of its sister chains.
- * Version:           1.0.0
+ * Version:           v1.0.0-beta1.0.2
  * Author:            Paul Singh
  * Author URI:        https://eurno.org
  * License:           MIT
