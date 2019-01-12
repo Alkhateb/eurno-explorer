@@ -1,13 +1,5 @@
 <?php
-if(isset($_GET[$chainName])){
-  echo '<div class="row alert alert-info">';
-    echo '<h6 class="w-100 text-center">Currently browsing the <b>' . $chainName . '</b> blockchain</h6>';
-  echo '</div>';
-} else {
-  echo '<div class="row alert alert-info">';
-    echo '<h6 class="w-100 text-center">Currently browsing the <b>enu</b> blockchain</h6>';
-  echo '</div>';
-}
+echo '<div class="w-100 eno-holder" >';
 echo "<div class='w-100'>";
 echo "<form role='search'>";
   echo "<div class='p-2 input-group' id='search_enu'>";
@@ -24,6 +16,15 @@ echo "<form role='search'>";
       echo "</div>";
     echo "</form>";
   echo "</div>";
+  if(isset($_GET[$chainName])){
+    echo '<div class="alert alert-info">';
+      echo '<h6 class="text-center mb-0">Currently browsing the <b>' . $chainName . '</b> blockchain</h6>';
+    echo '</div>';
+  } else {
+    echo '<div class="alert alert-info">';
+      echo '<h6 class="text-center mb-0">Currently browsing the <b>enu</b> blockchain</h6>';
+    echo '</div>';
+  }
 ?>
 <script type="text/javascript">
 $s = window.location.search;
