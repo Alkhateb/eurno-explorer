@@ -16,7 +16,6 @@ if(!isset(get_option('eurno_explorer')['eurno_data']['api'][$chainName][0])) {
 $chainName = 'enu';
 $api = 'https://enu.qsx.io:443';
 }
-include_once "header.php";
 include_once "config/search.php";
 if((isset($_GET[$chainName])) && (empty($_GET[$chainName])) || (!isset($_GET[$chainName]))) {
   include_once "config/chain-info.php";
