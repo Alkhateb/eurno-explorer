@@ -55,7 +55,7 @@
             echo $i;
           echo '</td>';
           echo '<td id="' . $i . '" class="block-producer">';
-            echo '<a style="color:black;" href="./?'. $chainName . '=' . $bp['owner'] . '#search_enu">' . $bp['owner'] . '</a>';
+            echo '<a href="./?'. $chainName . '=' . $bp['owner'] . '#search_enu">' . $bp['owner'] . '</a>';
           echo '</td>';
           echo '<td>';
             echo '<span  id="status-' . $i . '" class="badge badge-warning mx-auto">Inactive';
