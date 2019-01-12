@@ -73,7 +73,6 @@
   <?php
     echo '<div id="chain-data" class="alert alert-primary">';
       echo '<div class="row break-word">';
-      echo '<h5 class="w-100 text-center">Current Chain: '. $chainName .'</h5>';
         echo '<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">';
         echo '<div class="w-100">Current Block Time: <span id="head-block-time">';
         echo '</span></div>';
