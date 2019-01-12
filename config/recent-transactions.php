@@ -47,7 +47,7 @@
   $cpu_max = $obj['cpu_limit']['max'];
   $cpu_used = $obj['cpu_limit']['used'];
   $cpu_weight = $obj['cpu_weight'];
-  $created = $obj['created'];
+  $created = date('D, M j, Y \a\t g:ia', strtotime($obj['created']));
   $net_available = $obj['net_limit']['available'];
   $net_max = $obj['net_limit']['max'];
   $net_used = $obj['net_limit']['used'];
@@ -87,7 +87,19 @@
             echo '<h5>Staked NET: ' . $staked_net . '</h5>';
             echo '<h5>RAM Quota: ' . $ram_quota . '</h5>';
             echo '<h5>RAM Used: ' . $ram_used . '</h5>';
-            echo '<h5>Refund Pending: ' . $refund_request . '</h5>';
+            if(isset($refund_request)){
+              $ref_req_date = date($refund_request['request_time']);
+              $ref_req_net = $refund_request['net_amount'];
+              $ref_req_cpu = $refund_request['cpu_amount'];
+              echo '<h5>Refund Pending: True</h5>';
+              echo '<h5>Request Date: ' . date('D, M j, Y \a\t g:ia', strtotime($ref_req_date)) . '</h5>';
+              echo '<h5>Issue Date: ' . date('D, M j, Y \a\t g:ia', strtotime($ref_req_date. ' + 3 days'));
+              echo '<h5>Refund NET: ' . $ref_req_net . '</h5>';
+              echo '<h5>Refund CPU: ' . $ref_req_cpu . '</h5>';
+
+            } else {
+              echo '<h5>Refund Requested: False</h5>';
+            }
           echo '</div>';
           echo '<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 my-auto mr-4" id="qr_Code">';
             echo '<script type="text/javascript">';
@@ -233,5 +245,7 @@ function recentTransactions($name, $api, $chain){
   }
 }
 ?>
+</div>
+</div>
 </div>
 </div>
