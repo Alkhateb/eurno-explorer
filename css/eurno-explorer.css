@@ -1,0 +1,60 @@
+.eno-holder{
+  max-width: 100vw !important;
+}
+.break-word {
+  word-break: break-all;
+}
+.eno-container {
+  width: 80%;
+  background-color: white;
+  padding:3%;
+  border-radius:8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.eno-box {
+  width:100%;
+  padding:2%;
+  word-break: break-all;
+  height:200px !important;
+  overflow-y: scroll;
+}
+.sender, .sender a {
+  color:red;
+}
+.sender a:hover {
+  color:black;
+}
+td,th{
+word-break: keep-all !important;
+border: none !important;
+}
+td a{
+  text-decoration: none !important;
+  color:black !important;
+}
+th {
+  background-color: rgba(71, 133, 137, .6) !important;
+  color:white !important;
+}
+tr{
+  transition: 0.5s;
+}
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+tr:hover{
+  background: rgba(0, 0, 0, .5);
+  color: white !important;
+}
+td a:hover {
+  color: white !important;
+}
+
+.bal {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)  !important;
+}
+.ac_detail_card {
+  max-height:200px  !important;
+  overflow:scroll  !important;
+}
