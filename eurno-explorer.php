@@ -11,8 +11,8 @@
  * @wordpress-plugin
  * Plugin Name:       Eurno Explorer
  * Plugin URI:        https://github.com/eurno/eurno-explorer
- * Description:       A plugin which allows users to explore their accounts on the EOS blockchain and some of its sister chains.
- * Version:           v1.0.0-beta1.0.2
+ * Description:       Adds the shortcode [eurno_explorer] to Wordpress. This allows you to display information about the EOS, Enumivo and Telos blockchains, and allows your visitors to check their balance on each chain.
+ * Version:           v1.0.0-beta1.0.3
  * Author:            Paul Singh
  * Author URI:        https://eurno.org
  * License:           MIT
@@ -23,12 +23,18 @@ function check_bootstrap() {
   global $wp_styles;
   $srcs = array_map('basename', (array) wp_list_pluck($wp_styles->registered, 'src') );
   if ( in_array('bootstrap.css', $srcs) || in_array('bootstrap.min.css', $srcs)  ) {
+    wp_deregister_style('bootstrap');
+    wp_enqueue_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css' );
   } else {
     wp_enqueue_style('bootstrap', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css' );
   }
 }
 add_action('wp_enqueue_scripts', 'check_bootstrap', 99999);
 function explorer_script(){
+  global $post;
+if( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'eurno_explorer') ) {
+  wp_enqueue_style('font-awesome', plugin_dir_url(__FILE__) . 'css/all.min.css');
+  wp_enqueue_style('eurno-style', plugin_dir_url(__FILE__) . 'css/eurno-explorer.css');
   wp_register_script('qrcode', plugin_dir_url(__FILE__) . 'js/qrcodegen.js', '1.4.0', false);
   wp_enqueue_script('qrcode');
   wp_register_script('renderjson', plugin_dir_url(__FILE__) . 'js/renderjson.js', '1.4.0', false);
@@ -39,6 +45,7 @@ function explorer_script(){
       'pluginsUrl' => plugins_url('', __FILE__),
       'eurnoExplorer' => get_option('eurno_explorer'),
   ));
+}
 }
 add_action('wp_enqueue_scripts', 'explorer_script');
 function enu_explorer_shortcode() {
