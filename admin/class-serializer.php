@@ -8,6 +8,12 @@ class Serializer {
       if ( ! ( $this->has_valid_nonce() && current_user_can( 'manage_options' ) ) ) {
         wp_die( __("It seemes there has been an error, it seems to be an issue with the the browser cache, please try refreshing the page and then try again.") );
       }
+      $plug = $_POST['plugin'];
+      if($plug === 'refresh') {
+        delete_option( 'eurno_explorer' );
+        $this->redirect();
+
+      } if(!$plug) {
       $chain = $_POST['chain'];
       if((!$_POST[$chain.'_name'] || !$_POST[$chain.'_contract'] || !$_POST[$chain.'_symbol'] || !$_POST[$chain.'_type'] || !$_POST[$chain.'_logo']) && (!isset($_POST[$chain.'_token']))){
         wp_die( __("It seems you haven't filled in all the information required to add a token. Make sure you complete all the fields.") );
@@ -55,6 +61,7 @@ class Serializer {
       }
       $this->redirect();
     }
+  }
     private function has_valid_nonce() {
     // If the field isn't even in the $_POST, then it's invalid.
     if ( ! isset( $_POST['eurno-explorer-message'] ) ) { // Input var okay.

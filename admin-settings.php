@@ -30,12 +30,12 @@ function eurno_explorer_admin_settings() {
             [ "name" => "Frequent Trader Points",
             "contract" => "ftp.coin",
             "symbol" => "FTP",
-            "logo" => plugin_dir_url(__FILE__) . "img/enu.png",
+            "logo" => plugin_dir_url(__FILE__) . "img/ftp.png",
             "type" => "token" ],
             [ "name" => "Enumivo Liquidity Network",
             "contract" => "eln.coin",
             "symbol" => "ELN",
-            "logo" => plugin_dir_url(__FILE__) . "img/enu.png",
+            "logo" => plugin_dir_url(__FILE__) . "img/eln.png",
             "type" => "stable coin" ],
             [ "name" => "Ethereum",
             "contract" => "iou.coin",
@@ -132,12 +132,12 @@ function eurno_explorer_admin_settings() {
             "https://eos.greymass.com:443"
           ),
           "tlos" => array(
-            "https://telosapi.eosawake.io:443"
+            "https://api.telosfoundation.io"
           )
         )
       )
     );
-    update_option( 'eurno_explorer', $value );
+    update_option( 'eurno_explorer', $value, 'no' );
   }
   $serializer = new Serializer();
   $serializer->init();

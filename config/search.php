@@ -1,5 +1,5 @@
 <?php
-echo '<div class="w-100 eno-holder" >';
+echo '<div class="w-100 eno-holder" style="font-size:15px;"">';
 echo "<div class='w-100'>";
 echo "<form role='search'>";
   echo "<div class='p-2 input-group' id='search_enu'>";

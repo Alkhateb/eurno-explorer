@@ -12,7 +12,7 @@
  * Plugin Name:       Eurno Explorer
  * Plugin URI:        https://github.com/eurno/eurno-explorer
  * Description:       Adds the shortcode [eurno_explorer] to Wordpress. This allows you to display information about the EOS, Enumivo and Telos blockchains, and allows your visitors to check their balance on each chain.
- * Version:           v1.0.0-beta1.0.3
+ * Version:           v1.0.0-beta1.0.4
  * Author:            Paul Singh
  * Author URI:        https://eurno.org
  * License:           MIT

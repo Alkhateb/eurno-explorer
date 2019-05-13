@@ -45,4 +45,5 @@ td,th {
           <p>We would like to thank the people over at Stack Overflow for assisting with certain queries we had a long the way.</p>
           <h2>Happiness</h2>
         </div><!-- #universal-message-container -->
+      </div><!-- #universal-message-container -->
 </div><!-- .wrap -->
