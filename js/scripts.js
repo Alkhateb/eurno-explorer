@@ -79,7 +79,7 @@ function balances($account_name, $api, $chainName) {
             newNode0.setAttribute("class", " mx-auto card p-1 my-2 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5");
             newNode1.setAttribute("class", "card-body p-1");
             newNode2.setAttribute("class", "row");
-            newNode3.setAttribute("class", "col-1 mr-3");
+            newNode3.setAttribute("class", "col-2 mr-3");
             newNode4.setAttribute("class", "col");
             newNode0.appendChild(newNode1);
             newNode1.appendChild(newNode2);

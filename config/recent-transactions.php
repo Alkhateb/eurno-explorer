@@ -27,7 +27,7 @@
   if(isset($obj['error'])){
     echo '<div class="card border border-danger mt-5">';
       echo '<div class="card-header alert alert-danger">';
-        echo 'Showing results for: '.$name.' on: ' . $chainName;
+        echo 'Showing results for: '. $name .' on: ' . $chainName;
       echo '</div>';
       echo '<div class="card-body">';
         echo '<div class="p-4">';
