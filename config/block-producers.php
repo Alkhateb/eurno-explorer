@@ -41,14 +41,9 @@
       echo '<tbody>';
       $i = 1;
       foreach ($obj['rows'] as $bp) {
-        if(($chainName === "tlos") || ($chainName === "eos")) {
           $time = $bp['last_claim_time'];
           $dateTime = new DateTime($time);
           $time = $dateTime->format('Y-m-d');
-        } else {
-          $time = $bp['last_claim_time'] /1000000;
-          $time = date('Y-m-d', $time);
-        }
         $votes = number_format((float)$bp['total_votes'], 0, '.', '');
         echo '<tr>';
           echo '<td>';
