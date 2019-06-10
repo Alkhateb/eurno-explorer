@@ -29,6 +29,9 @@ td,th{
 word-break: keep-all !important;
 border: none !important;
 }
+td {
+  padding: 1% 1% 1% 2% !important;
+}
 td a{
   text-decoration: none !important;
   color:black !important;
@@ -36,6 +39,7 @@ td a{
 th {
   background-color: rgba(71, 133, 137, .6) !important;
   color:white !important;
+  padding: 2% 2% 2% 2% !important;
 }
 tr{
   transition: 0.5s;
