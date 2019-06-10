@@ -180,13 +180,16 @@ function recentTransactions($name, $api, $chain){
   $tx_status = '';
   $prevID = null;
   $prevType = null;
+  $prevAcc = null;
   echo '<div id="recents">';
   foreach (array_reverse($obj['actions']) as $key => $obj) {
     $tx_id = $obj['action_trace']['trx_id'];
     $tx_type = $obj['action_trace']['act']['name'];
-    if ($tx_type === $prevType && $prevID === $tx_id && $prevID.$prevType !== null) {
+    $acc = $obj['action_trace']['act']['account'];
+    if ($acc === $prevAcc && $prevID === $tx_id && $prevID !== null) {
       $prevID = $tx_id;
       $prevType = $tx_type;
+      $prevAcc = $acc;
       continue;
     } else;
     $prevID = $tx_id;
@@ -200,6 +203,7 @@ function recentTransactions($name, $api, $chain){
       $block_time = $obj['action_trace']['block_time'];
       $block_id = $obj['action_trace']['producer_block_id'];
       $tx_contract = $obj['action_trace']['act']['account'];
+      $prevAcc = $acc;
       echo '<transfer class="card m-3 p-2 row">';
         echo '<div class="row mx-auto">';
           echo '<div class="mx-auto col-lg-2 col-md-2 col-sm-12 col-12 col-xl-2 text-center">';

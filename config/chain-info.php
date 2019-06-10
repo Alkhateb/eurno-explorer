@@ -55,14 +55,16 @@
         var bps = document.getElementsByClassName('block-producer');
         var arr = Array.from(bps);
         arr.forEach( element => {
-          if(element.innerText === document.getElementById('current-block-producer').innerText) {
-            document.getElementById('status-' + element.id).classList.remove("badge-warning");
-            document.getElementById('status-' + element.id).classList.add("badge-success");
-            document.getElementById('status-' + element.id).innerText = "Active";
-          } if(element.innerText !== document.getElementById('current-block-producer').innerText) {
-            document.getElementById('status-' + element.id).classList.remove("badge-success");
-            document.getElementById('status-' + element.id).classList.add("badge-warning");
-            document.getElementById('status-' + element.id).innerText = "Inactive";
+          if(element.id < 22) {
+            if(element.innerText === document.getElementById('current-block-producer').innerText) {
+              document.getElementById('status-' + element.id).classList.remove("badge-warning");
+              document.getElementById('status-' + element.id).classList.add("badge-success");
+              document.getElementById('status-' + element.id).innerText = "Producing";
+            } if(element.innerText !== document.getElementById('current-block-producer').innerText) {
+              document.getElementById('status-' + element.id).classList.remove("badge-success");
+              document.getElementById('status-' + element.id).classList.add("badge-warning");
+              document.getElementById('status-' + element.id).innerText = "Idle";
+            }
           }
         })
       })

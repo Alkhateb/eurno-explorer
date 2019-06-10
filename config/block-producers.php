@@ -44,6 +44,16 @@
           $time = $bp['last_claim_time'];
           $dateTime = new DateTime($time);
           $time = $dateTime->format('Y-m-d');
+          $badge = '';
+          $status = '';
+          if ($i > 21) {
+            $badge = "danger";
+            $status = "Inactive";
+          }
+          if ($i < 22) {
+            $badge = "warning";
+            $status = "Idle";
+          }
         $votes = number_format((float)$bp['total_votes'], 0, '.', '');
         echo '<tr>';
           echo '<td>';
@@ -53,7 +63,7 @@
             echo '<a href="./?'. $chainName . '=' . $bp['owner'] . '#search_enu">' . $bp['owner'] . '</a>';
           echo '</td>';
           echo '<td>';
-            echo '<span  id="status-' . $i . '" class="badge badge-warning mx-auto">Inactive';
+            echo '<span  id="status-' . $i . '" class="badge badge-' . $badge . ' mx-auto">' . $status;
           echo '</td>';
           echo '<td>';
             echo number_format($votes / 10000);
